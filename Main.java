@@ -1,27 +1,35 @@
 package com.company;
 
+import com.sun.org.apache.xerces.internal.util.SymbolTable;
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 import java.awt.*;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        int MaSV, Malop;
 
-    public void Nhap() {
-        super.Nhap();
-        MaSV = Console.readInt("Nhap ma SV:");
-        Malop = Console.readInt("Nhap ma lop:");
-    }
 
-    public void In() {
-        System.out.println(hoten);
-        System.out.println(diachi);
-        System.out.println(MaSV);
-        System.out.println(Malop);
-    }
+        Scanner x = new Scanner(System.in);
+        System.out.println("moi nhap loại nv :");
+        String loai = x.nextLine();
+        System.out.println("mòi nhập tiền lương :");
+        int luong = x.nextInt();
 
-    public int Tinhluong() {
-        return 150000;
+         if (loai.equals("A"))
+             { System.out.println("tien luong cuoi thang cua nhan vien la:" + (luong + 3000));}
+
+         else  if (loai.equals("B"))
+
+        { System.out.println("tien luong cuoi thang cua nhan vien la:" + (luong + 2000));}
+         else
+         { System.out.println("tien luong cuoi thang cua nhan vien la:" + (luong + 1000));
+         }
+
+
+
     }
 }
+
+
